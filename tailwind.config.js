@@ -4,11 +4,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl': '0px -2px 12px -5px rgba(0, 0, 0, 0.5)',
+      },
+      // use monserrat as the default font
+      fontFamily: {
+        'sans': ['Montserrat', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+  
 }
