@@ -1,6 +1,8 @@
 import Search from "./Search";
 import React, { useRef } from "react";
+
 import { scrollJs } from "../utils/scroll";
+import { ButtomNav } from "../assets/ButtomNav";
 
 
 
@@ -16,12 +18,10 @@ scrollJs(navMenuRef); // calls a scroll js method and passes the reference to th
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-10 transition  ease-out">
-        <nav className={"nav container h-9 flex justify-between items-center  "}  >
+        <nav className={"nav container h-9 flex p-5 mt-2 mb-3 justify-between items-center  "}  >
 
-          <a  className="nav__logo " aria-label="navigation logo" >
             <Search />
-          </a> 
-
+        
           < div ref={navMenuRef} className="nav__menu  h-16 py-0 transition ease-in px-4 grid rounded-t content-center  fixed bottom-0  left-0 bg-white  w-full shadow-3xl" id="nav-menu">
             
             <ul  className="nav__list flex  justify-around">

@@ -20,18 +20,14 @@ export const scrollJs = (element_react_ref:React.RefObject<any>) =>{ // accepts 
 
     }
 
-    console.log(lastScrollPosition, 'lastScroll');
-    console.log(currentScrollPosition, 'currentScroll');
-
-
     if(currentScrollPosition > lastScrollPosition && element.current){
-        console.log('scroll down')
+        
         element.current.classList.add('scroll-down');
         element.current.classList.remove('bg-white');
     }
 
     if(currentScrollPosition < lastScrollPosition && element.current){
-        console.log('scroll up5')
+        
         element.current.classList.remove('scroll-down');
         element.current.classList.add('bg-white');
     }
@@ -42,6 +38,37 @@ export const scrollJs = (element_react_ref:React.RefObject<any>) =>{ // accepts 
   }
 
   window.addEventListener('scroll', scrollButtomNav);
+
+
+  const scrollTopNav = () =>{
+
+    // get parent div from ref
+    const grandParentEl:HTMLElement  = element.current?.parentElement.parentElement;
+    
+    // get the parent div height
+    const parentHeight:number = 65;
+    // get the current scroll position
+    const currentScrollPosition = window.scrollY;
+    
+
+    if(parentHeight < currentScrollPosition  && grandParentEl){
+      grandParentEl.classList.add('bg-white');
+      // add shadow
+      grandParentEl.classList.add('shadow-md');
+    }
+
+    if(parentHeight > currentScrollPosition && grandParentEl){
+      grandParentEl.classList.remove('bg-white');
+      // add shadow
+      grandParentEl.classList.remove('shadow-md');
+    }
+    
+    console.log(parentHeight);
+  }
+  window.addEventListener('scroll', scrollTopNav);
+
+
+  
 
 }
 

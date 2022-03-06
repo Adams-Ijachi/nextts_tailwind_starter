@@ -37,8 +37,7 @@ export default function Home() {
 
                     src="https://a0.muscache.com/im/pictures/53e51dcb-8fad-4ce8-b61c-8a7a369267bf.jpg"
                     alt="Hero Image"
-                    width={1200}
-                    height={1200}
+                    
                     layout="fill"
                     quality={80}
 
