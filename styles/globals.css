@@ -36,10 +36,20 @@ section{
 
 
 /* SCROLL STYLES */
-.scroll-up{
-
-}
+  
 
 .scroll-down{
     transform: translate3d(0,100%,0);
+}
+
+.active-link{
+    position: relative;
+    color: green;
+    transition: .3s;
+}
+
+@media (min-width: 1024px) {
+    .bx {
+        display: none !important;
+    }
 }

@@ -37,10 +37,12 @@ export const scrollJs = (element_react_ref:React.RefObject<any>) =>{ // accepts 
 
   }
 
-  window.addEventListener('scroll', scrollButtomNav);
+ 
 
 
   const scrollTopNav = () =>{
+
+
 
     // get parent div from ref
     const grandParentEl:HTMLElement  = element.current?.parentElement.parentElement;
@@ -65,7 +67,19 @@ export const scrollJs = (element_react_ref:React.RefObject<any>) =>{ // accepts 
     
     console.log(parentHeight);
   }
-  window.addEventListener('scroll', scrollTopNav);
+
+
+  if (window.screen.width < 1024) {
+    // Resolution is 1024x768 or above
+
+    console.log('wrk')
+    window.addEventListener('scroll', scrollButtomNav);
+
+    window.addEventListener('scroll', scrollTopNav);
+
+
+  }
+
 
 
   
