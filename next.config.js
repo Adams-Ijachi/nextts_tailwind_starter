@@ -3,6 +3,6 @@ module.exports = {
 
   // image host config
   images: {
-    domains: ['a0.muscache.com'],
+    domains: ['a0.muscache.com','links.papareact.com'],
   }
 }
